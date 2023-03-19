@@ -37,6 +37,17 @@ public class Human {
         return age;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Human{" +
+                "ID=" + ID +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender=" + gender +
+                ", passportSeries=" + passportSeries +
+                ", passportNumber=" + passportNumber +
+                '}';
+    }
 }
