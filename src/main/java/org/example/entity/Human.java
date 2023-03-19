@@ -33,8 +33,7 @@ public class Human {
         Date today = new Date();
         int yearBirth = date.getYear();
         int yearToday = today.getYear();
-        final int age =  yearToday-yearBirth;
-        return age;
+        return yearToday-yearBirth;
     }
 
     @Override

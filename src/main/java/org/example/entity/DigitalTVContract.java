@@ -3,9 +3,9 @@ package org.example.entity;
 import java.util.Date;
 
 public class DigitalTVContract extends Contract {
-    private Object channelPackage;
+    private int channelPackage;
     public DigitalTVContract(int id, Date contractStartDate, Date contractCompletionDate,
-                                int numbersOfContract, Human сontractOwner, Object channelPackage) {
+                                int numbersOfContract, Human сontractOwner, int channelPackage) {
         super(id, contractStartDate, contractCompletionDate, numbersOfContract, сontractOwner);
         this.channelPackage = channelPackage;
     }

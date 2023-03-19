@@ -7,7 +7,7 @@ public abstract class Contract {
     private Date contractStartDate;
     private Date contractCompletionDate;
     private int numbersOfContract;
-    private Human сontractOwner;
+    private Human contractOwner;
     private String typeOfContract;
 
     public Contract(int id, Date contractStartDate, Date contractCompletionDate, int numbersOfContract, Human сontractOwner) {
@@ -15,7 +15,7 @@ public abstract class Contract {
         this.contractStartDate = contractStartDate;
         this.contractCompletionDate = contractCompletionDate;
         this.numbersOfContract = numbersOfContract;
-        this.сontractOwner = сontractOwner;
+        this.contractOwner = contractOwner;
     }
 
     public int getID() {
@@ -34,8 +34,8 @@ public abstract class Contract {
         return contractCompletionDate;
     }
 
-    public Object getСontractOwner() {
-        return сontractOwner;
+    public Object getContractOwner() {
+        return contractOwner;
     }
 
     public String getTypeOfContract() {
@@ -49,7 +49,7 @@ public abstract class Contract {
                 ", contractStartDate=" + contractStartDate +
                 ", contractCompletionDate=" + contractCompletionDate +
                 ", numbersOfContract=" + numbersOfContract +
-                ", сontractOwner=" + сontractOwner +
+                ", contractOwner=" + contractOwner +
                 ", typeOfContract='" + typeOfContract + '\'' +
                 '}';
     }

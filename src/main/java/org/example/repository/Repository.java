@@ -1,11 +1,8 @@
 package org.example.repository;
 
 import org.example.entity.Contract;
-import org.example.entity.DigitalTVContract;
 
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
 
 public class Repository {
     private Contract[] contracts;
@@ -16,14 +13,17 @@ public class Repository {
         size = 0;
         this.contracts = new Contract[capacity];
     }
-    private void copy(Contract[] newArray) {
-        for (int i = 0; i < size; i++) {
-            newArray[i] = contracts[i];
 
-        }
+    /**
+     *
+     * @param newArray - which coping
+     */
+    private void copy(Contract[] newArray) {
+        if (size >= 0) System.arraycopy(contracts, 0, newArray, 0, size);
 
         this.contracts = newArray;
     }
+
     public void add(Contract contract) {
        if(size == capacity) {
            toExpendArray();
@@ -34,16 +34,11 @@ public class Repository {
         Arrays.sort(this.contracts, 0, size, (o1, o2)-> o1.getID() - o2.getID());
     }
 
-
     public void addAll(Contract... contract) {
         for (Contract c:contract) {
             add(c);
         }
     }
-
-
-
-
 
     public void toExpendArray() {
         this.capacity *= 2;
@@ -57,9 +52,11 @@ public class Repository {
             return null;
         return contracts[index];
     }
+
     private boolean outOfRange(int i) {
         return i < 0 || i >= size;
     }
+
     private int interpolationSearch(int id) {
         int highEnd = (size - 1);
         int lowEnd = 0;
@@ -89,4 +86,5 @@ public class Repository {
         }
         return -1;
     }
+
 }

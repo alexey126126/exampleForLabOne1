@@ -7,8 +7,8 @@ public class MobileCommunicationContract extends Contract {
     private int limitOfSMS;
     private int limitOfTraffic;
     public MobileCommunicationContract(int id, Date contractStartDate, Date contractCompletionDate, int numbersOfContract,
-                                      Human сontractOwner, int limitOfMinutes, int limitOfSMS, int limitOfTraffic) {
-        super(id, contractStartDate, contractCompletionDate, numbersOfContract, сontractOwner);
+                                      Human contractOwner, int limitOfMinutes, int limitOfSMS, int limitOfTraffic) {
+        super(id, contractStartDate, contractCompletionDate, numbersOfContract, contractOwner);
         this.limitOfMinutes = limitOfMinutes;
         this.limitOfSMS = limitOfSMS;
         this.limitOfTraffic = limitOfTraffic;
