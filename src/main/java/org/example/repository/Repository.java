@@ -22,6 +22,7 @@ public class Repository {
         if (size >= 0) System.arraycopy(contracts, 0, newArray, 0, size);
         this.contracts = newArray;
     }
+
     public void add(Contract contract) {
        if(size == capacity) {
            toExpendArray();
@@ -30,6 +31,20 @@ public class Repository {
        size += 1;
         Arrays.sort(this.contracts, 0, size, (o1, o2)-> o1.getID() - o2.getID());
     }
+
+//    public void add(Contract contract) {
+//        for (int i = 0; i < capacity; i++) {
+//            if (contracts[i] == null) {
+//                contracts[size] = contract;
+//                break;
+//            }
+//            if (i == capacity - 1) {
+//                toExpendArray();
+//                add(contract);
+//            }
+//        }
+//        Arrays.sort(this.contracts, 0, size, (o1, o2)-> o1.getID() - o2.getID());
+//    }
 
     public void addAll(Contract... contract) {
         for (Contract c:contract) {
@@ -56,6 +71,7 @@ public class Repository {
             return null;
         return contracts[index];
     }
+
 
     private boolean outOfRange(int i) {
         return i < 0 || i >= size;
