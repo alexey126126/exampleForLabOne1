@@ -1,16 +1,17 @@
 package org.example.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public abstract class Contract {
     private int ID;
-    private Date contractStartDate;
-    private Date contractCompletionDate;
+    private LocalDate contractStartDate;
+    private LocalDate contractCompletionDate;
     private int numbersOfContract;
     private Human contractOwner;
-    private String typeOfContract;
 
-    public Contract(int id, Date contractStartDate, Date contractCompletionDate, int numbersOfContract, Human сontractOwner) {
+
+    public Contract(int id, LocalDate contractStartDate, LocalDate contractCompletionDate, int numbersOfContract, Human сontractOwner) {
         ID = id;
         this.contractStartDate = contractStartDate;
         this.contractCompletionDate = contractCompletionDate;
@@ -22,7 +23,7 @@ public abstract class Contract {
         return ID;
     }
 
-    public Date getContractStartDate() {
+    public LocalDate getContractStartDate() {
         return contractStartDate;
     }
 
@@ -30,7 +31,7 @@ public abstract class Contract {
         return numbersOfContract;
     }
 
-    public Date getContractCompletionDate() {
+    public LocalDate getContractCompletionDate() {
         return contractCompletionDate;
     }
 
@@ -38,9 +39,7 @@ public abstract class Contract {
         return contractOwner;
     }
 
-    public String getTypeOfContract() {
-        return typeOfContract;
-    }
+
 
     @Override
     public String toString() {
@@ -49,8 +48,7 @@ public abstract class Contract {
                 ", contractStartDate=" + contractStartDate +
                 ", contractCompletionDate=" + contractCompletionDate +
                 ", numbersOfContract=" + numbersOfContract +
-                ", contractOwner=" + contractOwner +
-                ", typeOfContract='" + typeOfContract + '\'' +
+                ", contractOwner=" + contractOwner + '\'' +
                 '}';
     }
 }
