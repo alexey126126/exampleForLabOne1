@@ -40,7 +40,6 @@ public abstract class Contract {
     }
 
 
-
     @Override
     public String toString() {
         return "Contract{" +
@@ -48,7 +47,7 @@ public abstract class Contract {
                 ", contractStartDate=" + contractStartDate +
                 ", contractCompletionDate=" + contractCompletionDate +
                 ", numbersOfContract=" + numbersOfContract +
-                ", contractOwner=" + contractOwner + '\'' +
+                ", contractOwner=" + contractOwner +
                 '}';
     }
 }

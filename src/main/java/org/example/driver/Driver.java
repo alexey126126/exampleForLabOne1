@@ -16,14 +16,14 @@ public class Driver {
                         LocalDate.of(2024, 03, 20),
                         1,
                         new Human(
-                            1,
-                            "Алексей",
-                            "Шульгин",
-                            "Андреевич",
-                            LocalDate.of(2002, 12, 04),
-                            Gender.MALE,
-                            2021,
-                            456274 ),
+                                1,
+                                "Алексей",
+                                "Шульгин",
+                                "Андреевич",
+                                LocalDate.of(2002, 12, 04),
+                                Gender.MALE,
+                                2021,
+                                456274),
                         50.5),
                 new MobileCommunicationContract(
                         2,
@@ -43,7 +43,7 @@ public class Driver {
                         30),
                 new DigitalTVContract(
                         3,
-                        LocalDate.of(2023,01,25),
+                        LocalDate.of(2023, 01, 25),
                         LocalDate.of(2024, 01, 25),
                         3,
                         new Human(
@@ -58,8 +58,7 @@ public class Driver {
                         120)
         );
         repository.printById(3);
-
-
+        repository.removeContractById(3);
     }
 
 

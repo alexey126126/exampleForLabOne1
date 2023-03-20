@@ -1,7 +1,5 @@
 package org.example.entity;
-
 import java.time.LocalDate;
-
 
 public class Human {
     private int ID;
@@ -25,11 +23,6 @@ public class Human {
         this.gender = gender;
         this.passportSeries = passportSeries;
         this.passportNumber = passportNumber;
-
-    }
-
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
     }
 
     private int getAge() {
