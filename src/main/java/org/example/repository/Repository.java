@@ -20,16 +20,11 @@ public class Repository {
      */
     private void copy(Contract[] newArray) {
         if (size >= 0) System.arraycopy(contracts, 0, newArray, 0, size);
-
         this.contracts = newArray;
     }
-//    public void append(Contract con) {
-//        contracts = append(contracts, con);
-//    }
     public void add(Contract contract) {
        if(size == capacity) {
            toExpendArray();
-
        }
        contracts[size] = contract;
        size += 1;
@@ -40,6 +35,13 @@ public class Repository {
         for (Contract c:contract) {
             add(c);
         }
+    }
+
+    public void removeContractById(int id) {
+        int index = interpolationSearch(id);
+        if (outOfRange(index))
+            System.out.println("Element is not found");
+        else contracts[index] = null;
     }
 
     public void toExpendArray() {
@@ -87,6 +89,10 @@ public class Repository {
             }
         }
         return -1;
+    }
+
+    public void printById(int id) {
+        System.out.println(findById(id));
     }
 
 }
