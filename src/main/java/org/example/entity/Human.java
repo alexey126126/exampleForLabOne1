@@ -8,12 +8,12 @@ public class Human {
     private String surname;
     private String patronymic;
     private Date dateOfBirth;
-    private boolean gender;
+    private Gender gender;
     private int passportSeries;
     private int passportNumber;
 
     public Human(int ID, String name, String surname, String patronymic, Date dateOfBirth,
-                 boolean gender, int passportSeries, int passportNumber) {
+                 Gender gender, int passportSeries, int passportNumber) {
         this.ID = ID;
         this.name = name;
         this.surname = surname;

@@ -23,7 +23,9 @@ public class Repository {
 
         this.contracts = newArray;
     }
-
+//    public void append(Contract con) {
+//        contracts = append(contracts, con);
+//    }
     public void add(Contract contract) {
        if(size == capacity) {
            toExpendArray();
