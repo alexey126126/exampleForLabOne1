@@ -1,7 +1,6 @@
 package org.example.repository;
 
 import org.example.entity.Contract;
-
 import java.util.Arrays;
 
 public class Repository {
@@ -15,8 +14,7 @@ public class Repository {
     }
 
     /**
-     *
-     * @param newArray - which coping
+     * @param newArray is copy elements from repository
      */
     private void copy(Contract[] newArray) {
         if (size >= 0) System.arraycopy(contracts, 0, newArray, 0, size);
